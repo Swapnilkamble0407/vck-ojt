@@ -25,7 +25,7 @@ export const getEmbeddings = async (text) => {
     throw new Error(`HTTP error! Status: ${response.status} - ${errorText}`);
   }
   const data = await response.json();
-  return data.embedding.values;
+  return data.embedding.values;   // 0.7 , 0.8
 };
 /**
  * Calculates the cosine similarity between two vectors.
@@ -41,6 +41,9 @@ export const cosineSimilarity = (vecA, vecB) => {
   let magnitudeB = 0;
   for (let i = 0; i < vecA.length; i++) {
     dotProduct += vecA[i] * vecB[i];
+
+    // dotProduct = dotProduct + vecA[i] * vecB[i];
+
     magnitudeA += vecA[i] * vecA[i];
     magnitudeB += vecB[i] * vecB[i];
   }
@@ -49,3 +52,4 @@ export const cosineSimilarity = (vecA, vecB) => {
   if (magnitudeA === 0 || magnitudeB === 0) return 0;
   return dotProduct / (magnitudeA * magnitudeB);
 };
+
