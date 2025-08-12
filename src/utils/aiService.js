@@ -65,9 +65,6 @@ export const getEmbeddings = async (text) => { // 3. Defining the 'getEmbeddings
   // 11. Parsing the Response
   // 'await response.json()' parses the JSON response from the server into a JavaScript object.
   const data = await response.json();
-
-  // 12. Returning the Embeddings
-  // We access the 'embedding.values' property from the parsed data, which contains the array of numbers.
   return data.embedding.values;
 };
 
@@ -98,9 +95,9 @@ export const cosineSimilarity = (vecA, vecB) => { // 15. Defining the 'cosineSim
   // 17. Loop through the vectors to calculate dot product and magnitudes
   // We assume both vectors have the same length (which they should for embeddings).
   for (let i = 0; i < vecA.length; i++) {
-    dotProduct += vecA[i] * vecB[i];      // Add the product of corresponding elements to dotProduct
-    magnitudeA += vecA[i] * vecA[i];      // Add square of element A to magnitudeA squared
-    magnitudeB += vecB[i] * vecB[i];      // Add square of element B to magnitudeB squared
+    dotProduct += vecA[i] * vecB[i];
+    magnitudeA += vecA[i] * vecA[i];
+    magnitudeB += vecB[i] * vecB[i];
   }
 
   // 18. Calculate the actual magnitudes (square root of the sum of squares)
@@ -115,3 +112,4 @@ export const cosineSimilarity = (vecA, vecB) => { // 15. Defining the 'cosineSim
   // Formula: dotProduct / (magnitudeA * magnitudeB)
   return dotProduct / (magnitudeA * magnitudeB);
 };
+

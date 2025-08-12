@@ -17,13 +17,8 @@ import { useState, useEffect } from 'react';
  *
  * @returns {boolean} - True if the browser is online, false if offline.
  */
-const useOnlineStatus = () => { // 3. Define our custom Hook: 'useOnlineStatus'
-
-  // 4. State Management with 'useState'
-  // 'isOnline' is our state variable. It will hold 'true' if we're online, 'false' if offline.
-  // 'setIsOnline' is the function we use to UPDATE the 'isOnline' state.
-  // 'navigator.onLine' is a built-in browser property that tells us the current online status.
-  // We initialize 'isOnline' with the browser's *current* online status when the hook first runs.
+function useOnlineStatus() {
+  // Initialize state with the current online status
   const [isOnline, setIsOnline] = useState(navigator.onLine);
 
   // 5. Side Effect Management with 'useEffect'
