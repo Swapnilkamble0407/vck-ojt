@@ -10,6 +10,7 @@ import CoursesPage from "./pages/CoursesPage";
 import AdmissionsPage from "./pages/AdmissionsPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import DeveloperInfoPopup from "./components/DeveloperInfo/DeveloperInfoPopup";
+import ChatbotComponents from "./components/Chatbot/ChatbotComponents"
 import { useState } from "react";
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </div>
+        <ChatbotComponents/>
         <Footer />
       </div>
     </Router>
