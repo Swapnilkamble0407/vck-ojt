@@ -1,8 +1,6 @@
 // src/pages/AdmissionsPage.jsx
-import React from "react";
 import { Link } from "react-router-dom";
-// No need to import pages.css here if you followed Step 24 and imported it in App.jsx
-function AdmissionsPage() {
+const AdmissionsPage = () => {
   return (
     <div className="page-container" style={{ overflow: "auto" }}>
       <h1>Admissions at Vivekanand College</h1>
@@ -51,12 +49,12 @@ function AdmissionsPage() {
       <h2>Application Process</h2>
       <ol>
         <li>
-          <b>Online Application:</b> Fill out the application form available on our
-          portal.
+          <b>Online Application:</b> Fill out the application form available on
+          our portal.
         </li>
         <li>
-        <b>Document Submission:</b> Upload scanned copies of required documents
-          (mark sheets, ID proof, etc.).
+          <b>Document Submission:</b> Upload scanned copies of required
+          documents (mark sheets, ID proof, etc.).
         </li>
         <li>
           <b>Entrance Exam (if applicable):</b>Appear for the college's entrance
@@ -67,7 +65,8 @@ function AdmissionsPage() {
           interview if shortlisted.
         </li>
         <li>
-          <b>Fee Payment:</b> Complete the admission by paying the required fees.
+          <b>Fee Payment:</b> Complete the admission by paying the required
+          fees.
         </li>
       </ol>
       <p>
@@ -86,9 +85,9 @@ function AdmissionsPage() {
         >
           Start Your Online Application
         </a> */}
-        {/* Replace "https://yourcollegeadmissionportal.com" with a real application portal link */}
+      {/* Replace "https://yourcollegeadmissionportal.com" with a real application portal link */}
       {/* </div> */}
     </div>
   );
-}
+};
 export default AdmissionsPage;
